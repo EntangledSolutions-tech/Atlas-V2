@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm ci --only=production
 
 # Copy application code first (smaller files)
-COPY tile-server.js ./
+COPY tile-server-gcs.js ./
 
 # Copy layers directory (this will be much smaller now)
 COPY layers/ ./layers/
